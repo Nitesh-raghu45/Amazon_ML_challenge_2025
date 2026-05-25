@@ -1,0 +1,5 @@
+pip install \
+  --extra-index-url=https://pypi.nvidia.com \
+  cudf-cu13==26.2.* \
+  cuml-cu13==26.2.* \
+  dask-cudf-cu13==26.2.*

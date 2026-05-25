@@ -1,0 +1,44 @@
+# Amazon ML 2025 — .gitignore
+
+# Environment & secrets
+.env
+.env.local
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Dataset & large files (do not commit)
+archive/train.csv
+archive/test.csv
+archive/sample_test.csv
+archive/embedding/
+archive/extraction/
+Images/
+
+# Model outputs
+outputs/*.pkl
+outputs/*.csv
+
+# Logs
+*.log
+cufile.log
+
+# OS
+.DS_Store
+Thumbs.db
