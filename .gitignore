@@ -27,8 +27,15 @@ build/
 archive/train.csv
 archive/test.csv
 archive/sample_test.csv
+
+# Batch extraction output folders (hundreds of small CSVs)
+archive/train/
+archive/test/
+archive/sample_test/
 archive/embedding/
 archive/extraction/
+
+# Images
 Images/
 
 # Model outputs
