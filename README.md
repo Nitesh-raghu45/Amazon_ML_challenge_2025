@@ -1,4 +1,4 @@
-# 🛒 Amazon ML 2025 — Product Price Prediction
+# Amazon ML 2025 — Product Price Prediction
 
 > **Competition**: Amazon ML Challenge 2025  
 > **Task**: Predict the price of Amazon products from product images + catalog text  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Problem Statement](#-problem-statement)
 - [Project Architecture](#-project-architecture)
@@ -23,11 +23,11 @@
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 Given a product's:
-- 📷 **Image** (product photo on Amazon)
-- 📝 **Catalog text** (name, description, attributes)
+- **Image** (product photo on Amazon)
+- **Catalog text** (name, description, attributes)
 
 Predict the **price** (in INR) as accurately as possible.
 
@@ -35,7 +35,7 @@ This is a **regression task** evaluated by RMSLE, which penalizes under-predicti
 
 ---
 
-## 🏗 Project Architecture
+## Project Architecture
 
 ```
                 ┌──────────────────────────────────────────────┐
@@ -69,7 +69,7 @@ This is a **regression task** evaluated by RMSLE, which penalizes under-predicti
 
 ---
 
-## 🔄 Pipeline Overview
+## Pipeline Overview
 
 | Stage | Script | Description |
 |-------|--------|-------------|
@@ -81,25 +81,25 @@ This is a **regression task** evaluated by RMSLE, which penalizes under-predicti
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 ```
 amezonML2025/
 │
-├── pipeline.py              # 🎯 Main orchestrator — run this for E2E
-├── config.py                # ⚙️  All paths, hyperparams, and model settings
+├── pipeline.py              #  Main orchestrator — run this for E2E
+├── config.py                #   All paths, hyperparams, and model settings
 │
-├── downloader.py            # 📥 Parallel image downloader
-├── extractor.py             # 🤖 VLM-based structured feature extractor
-├── embedder.py              # 🖼️  CLIP image+text embedding generator
-├── train_price_model.py     # 📈 XGBoost + LightGBM price predictor
+├── downloader.py            #  Parallel image downloader
+├── extractor.py             #  VLM-based structured feature extractor
+├── embedder.py              #  CLIP image+text embedding generator
+├── train_price_model.py     # XGBoost + LightGBM price predictor
 │
-├── schema.py                # 📐 Pydantic schema (ProductExtraction model)
-├── prompts.py               # 💬 LLM system prompt builder
-├── utils.py                 # 🛠️  Shared utilities (logging, retry, timer)
+├── schema.py                # Pydantic schema (ProductExtraction model)
+├── prompts.py               # LLM system prompt builder
+├── utils.py                 #  Shared utilities (logging, retry, timer)
 │
-├── requirements.txt         # 📦 Python dependencies
-├── .env.example             # 🔐 Environment variable template
+├── requirements.txt         # Python dependencies
+├── .env.example             # Environment variable template
 │
 ├── archive/                 # Dataset CSVs (from Kaggle)
 │   ├── train.csv
@@ -201,7 +201,7 @@ archive/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Run the complete pipeline end-to-end:
 
@@ -227,7 +227,7 @@ python pipeline.py --stage extract --extract-start 500
 
 ---
 
-## 🔧 Running Individual Stages
+## Running Individual Stages
 
 ### Stage 1: Download Images
 
@@ -315,7 +315,7 @@ VLM extraction is slow (~1–5 seconds/row). Batched checkpointing means crashes
 
 ---
 
-## 🐛 Bug Fixes (from original code)
+## Bug Fixes (from original code)
 
 | File | Bug | Fix |
 |------|-----|-----|
@@ -328,7 +328,7 @@ VLM extraction is slow (~1–5 seconds/row). Batched checkpointing means crashes
 
 ---
 
-## 📊 Results
+## Results
 
 | Model | Validation RMSLE |
 |-------|-----------------|
@@ -342,7 +342,7 @@ VLM extraction is slow (~1–5 seconds/row). Batched checkpointing means crashes
 
 ---
 
-## 🔐 Security Notes
+## Security Notes
 
 - **API keys** are loaded from environment variables (`.env`) — never commit them to git
 - `.env` is included in `.gitignore` by default
@@ -350,7 +350,7 @@ VLM extraction is slow (~1–5 seconds/row). Batched checkpointing means crashes
 
 ---
 
-## 📚 References
+## References
 
 - [Amazon ML Challenge 2025](https://www.amazon.science/blog)
 - [CLIP Paper — Radford et al. 2021](https://arxiv.org/abs/2103.00020)
@@ -361,14 +361,14 @@ VLM extraction is slow (~1–5 seconds/row). Batched checkpointing means crashes
 
 ---
 
-## 👤 Author
+## Author
 
 **Nitesh**  
 Amazon ML Challenge 2025 Participant  
 
 ---
 
-## 📄 License
+## License
 
 This project is for competition/educational use only.  
 Amazon dataset is subject to [Amazon's Terms of Service](https://www.amazon.com/gp/help/customer/display.html?nodeId=508088).
