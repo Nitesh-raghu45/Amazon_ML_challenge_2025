@@ -1,4 +1,4 @@
-# Amazon ML 2025 — Product Price Prediction
+# Amazon ML 2025 Product Price Prediction
 
 > **Competition**: Amazon ML Challenge 2025  
 > **Task**: Predict the price of Amazon products from product images + catalog text  
