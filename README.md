@@ -296,7 +296,7 @@ Trains XGBoost + LightGBM on the combined feature matrix. Saves:
 
 ---
 
-## 💡 Key Design Decisions
+##  Key Design Decisions
 
 ### Why CLIP embeddings?
 Visual signals matter for pricing: premium packaging, brand logos, product size, and presentation all correlate with price. CLIP captures these without task-specific training.
